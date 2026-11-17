@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 Route::get('/toko', [TokoController::class, 'index'])->name('toko');
+require __DIR__.'/katalog.php';
 
 /*
 |--------------------------------------------------------------------------
