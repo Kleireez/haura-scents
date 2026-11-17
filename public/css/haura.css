@@ -1,0 +1,203 @@
+/* =====================================================================
+   Gaya Haura Scents (satu file).
+   Warna dan tampilan dasar ada di variabel :root, jadi mudah diganti
+   saat template pilihan sudah ada.
+   ===================================================================== */
+:root {
+  --haura-utama: #5b4363;
+  --haura-utama-gelap: #46324d;
+  --haura-aksen: #b9935a;
+  --haura-latar: #faf7f4;
+  --haura-teks: #2e2a30;
+  --haura-gelap: #2b2230;
+  --haura-garis: #ece6e0;
+}
+
+body {
+  background: var(--haura-latar);
+  color: var(--haura-teks);
+}
+
+/* ---------- Tombol ---------- */
+.btn-haura {
+  background: var(--haura-utama);
+  border-color: var(--haura-utama);
+  color: #fff;
+}
+.btn-haura:hover,
+.btn-haura:focus {
+  background: var(--haura-utama-gelap);
+  border-color: var(--haura-utama-gelap);
+  color: #fff;
+}
+.btn-outline-haura {
+  border-color: var(--haura-utama);
+  color: var(--haura-utama);
+}
+.btn-outline-haura:hover,
+.btn-outline-haura:focus {
+  background: var(--haura-utama);
+  color: #fff;
+}
+.btn-wa {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+.btn-wa:hover,
+.btn-wa:focus {
+  background: #1ebe5b;
+  border-color: #1ebe5b;
+  color: #fff;
+}
+
+/* ---------- Navbar pembeli ---------- */
+.navbar-haura {
+  background: #fff;
+  border-bottom: 1px solid var(--haura-garis);
+}
+.brand-haura {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--haura-utama) !important;
+}
+.navbar-haura .nav-link {
+  color: var(--haura-teks);
+}
+.navbar-haura .nav-link.active {
+  color: var(--haura-utama);
+  font-weight: 600;
+}
+
+/* ---------- Beranda ---------- */
+.hero {
+  background: linear-gradient(135deg, #f1e7de 0%, #faf7f4 70%);
+  border-bottom: 1px solid var(--haura-garis);
+}
+.hero-kicker {
+  color: var(--haura-aksen);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.hero h1 {
+  color: var(--haura-utama-gelap);
+  font-weight: 700;
+}
+.judul-seksi {
+  color: var(--haura-utama-gelap);
+  font-weight: 700;
+}
+.langkah-nomor {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--haura-utama);
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Kartu aroma ---------- */
+.kartu-aroma {
+  border: 1px solid var(--haura-garis);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.kartu-aroma .foto-aroma {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #e9dfe8, #f3e7d6);
+  overflow: hidden;
+}
+.kartu-aroma .foto-aroma img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kartu-aroma .foto-kosong {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--haura-utama);
+}
+.kartu-aroma .lencana-foto {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.kartu-aroma.kosong .foto-aroma img,
+.kartu-aroma.kosong .foto-kosong {
+  opacity: 0.45;
+}
+.harga-aroma {
+  color: var(--haura-utama-gelap);
+  font-weight: 700;
+}
+
+/* ---------- Kartu info ---------- */
+.kartu-info {
+  border: 1px solid var(--haura-garis);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+.gambar-qris {
+  max-width: 240px;
+  width: 100%;
+}
+
+/* ---------- Footer pembeli ---------- */
+.footer-haura {
+  background: var(--haura-gelap);
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer-haura a {
+  color: #fff;
+}
+
+/* ---------- Layout admin ---------- */
+.admin-sidebar {
+  --bs-offcanvas-bg: var(--haura-gelap);
+  --bs-offcanvas-color: #fff;
+  --bs-offcanvas-width: 260px;
+  background: var(--haura-gelap);
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .admin-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    min-height: 100vh;
+  }
+}
+.admin-sidebar .offcanvas-title {
+  color: #fff;
+  font-weight: 700;
+}
+.admin-sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+}
+.admin-sidebar .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+.admin-sidebar .nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+.admin-konten {
+  flex: 1;
+  min-width: 0;
+}
+.admin-topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--haura-garis);
+}
